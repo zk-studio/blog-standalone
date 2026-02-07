@@ -330,11 +330,11 @@ css_prefix: true
 # --------------------------------------
 inject:
   head:
-    - <link rel="stylesheet" href="/blog/css/custom-card-animation.css">
+    - <link rel="stylesheet" href="/blog-standalone/css/custom-card-animation.css">
   bottom:
-    - <script src="/blog/js/custom-card-animation.js"></script>
-    - <script src="/blog/js/tw_cn.js"></script>
-    - <script src="/blog/js/custom-toolbar.js"></script>
+    - <script src="/blog-standalone/js/custom-card-animation.js"></script>
+    - <script src="/blog-standalone/js/tw_cn.js"></script>
+    - <script src="/blog-standalone/js/custom-toolbar.js"></script>
     - <script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
     - <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
