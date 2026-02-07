@@ -4,7 +4,7 @@
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url(/blog/img/anime_girl_water.jpg) center center / cover no-repeat;
+  background: url(/blog-standalone/img/anime_girl_water.jpg) center center / cover no-repeat;
   background-attachment: fixed;
 }
 
@@ -15,7 +15,7 @@ body::before {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url(/blog/img/anime_girl_water.jpg) center center / cover no-repeat;
+  background: url(/blog-standalone/img/anime_girl_water.jpg) center center / cover no-repeat;
   background-attachment: fixed;
 }
 
