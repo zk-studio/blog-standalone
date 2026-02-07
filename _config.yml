@@ -13,9 +13,9 @@ timezone: 'Asia/Shanghai'
 
 # URL
 # Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://zk-studio.github.io/boke
+url: https://zk-studio.github.io/blog-standalone
 # root: /blog/ # If your repo is 'my-blog', set this to '/my-blog/'
-root: /boke/
+root: /blog-standalone/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
