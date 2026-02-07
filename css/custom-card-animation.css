@@ -1,0 +1,263 @@
+/* 全局背景图设置 */
+#web_bg {
+  position: fixed;
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+  background: url(/blog/img/anime_girl_water.jpg) center center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+/* 如果没有 web_bg 元素，直接给 body 设置背景 */
+body::before {
+  content: "";
+  position: fixed;
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+  background: url(/blog/img/anime_girl_water.jpg) center center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+/* 文章卡片滚动动画 */
+/* 文章卡片滚动动画 - 更加夸张的从小变大效果 */
+.recent-post-item {
+  opacity: 0;
+  transform: translateY(100px) scale(0.7) !important;
+  transition: all 0.8s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
+  /* 贝塞尔曲线增加回弹效果 */
+  will-change: transform, opacity;
+}
+
+.recent-post-item.show {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* 侧边栏卡片动画 - 也是从小变大 */
+.card-widget {
+  opacity: 0;
+  transform: translateY(50px) scale(0.8) !important;
+  transition: all 0.7s ease-out !important;
+}
+
+.card-widget.show {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* 悬停效果优化 */
+.recent-post-item:hover {
+  transform: scale(1.03) translateY(-5px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 为 sidebar 添加交错延迟 */
+.card-widget:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.card-widget:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.card-widget:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.card-widget:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.card-widget:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.card-widget.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 侧边栏卡片延迟 */
+.card-widget:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.card-widget:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.card-widget:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.card-widget:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.card-widget:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.card-widget.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 主页标题字体美化 - 仿截图风格 & 艺术感升级 */
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&family=Noto+Serif+SC:wght@500;700&display=swap');
+
+#site-title,
+#site-subtitle,
+#site-name,
+.site-name,
+#nav .site-page {
+  font-family: 'ZCOOL XiaoWei', 'Noto Serif SC', serif !important;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  /* 增强阴影 */
+  font-weight: normal !important;
+  /* 艺术字体通常不需要加粗 */
+  letter-spacing: 3px;
+  /* 增加字间距 */
+}
+
+#site-title {
+  font-size: 4rem !important;
+  /* 加大标题 */
+  margin-bottom: 20px !important;
+}
+
+#site-subtitle {
+  font-size: 1.8rem !important;
+  opacity: 0.95;
+}
+
+/* 导航栏样式还原 & 美化 */
+#nav {
+  /* 还原为两端对齐 */
+  justify-content: space-between !important;
+  /* 玻璃拟态效果 */
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 导航栏字体美化 */
+#nav .site-page {
+  font-family: 'Noto Serif SC', 'Times New Roman', serif !important;
+  font-weight: bold !important;
+  font-size: 1.1em !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 搜索按钮微调 */
+#search-button {
+  margin-right: 10px;
+}
+
+/* 右下角工具栏样式重置 */
+#rightside {
+  bottom: 350px !important;
+  /* 再次提高，完全避开变大后的看板娘 */
+  z-index: 999 !important;
+}
+
+#rightside>div>button,
+#rightside>div>a {
+  background-color: #3b8bdb !important;
+  color: white !important;
+  border-radius: 8px !important;
+  width: 40px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  margin-bottom: 5px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  display: block !important;
+  font-size: 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+#rightside>div>button:hover,
+#rightside>div>a:hover {
+  background-color: #2672c2 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 繁简切换按钮内文字大小 */
+#translateLink i {
+  font-style: normal !important;
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-weight: bold;
+}
+
+/* Live2D Widget 样式适配 - 右下角 & 缩小 */
+#waifu {
+  left: auto !important;
+  right: 0px !important;
+  /* 往左挪一点点，显得不那么贴边 */
+  bottom: 20px !important;
+  z-index: 100 !important;
+  transform: scale(0.8) !important;
+  /* 调大至 0.8，角色更清晰 */
+  transform-origin: bottom right;
+  pointer-events: none;
+}
+
+/* 确保看板娘的 canvas 和工具栏可以交互 */
+#waifu canvas,
+#waifu-tool {
+  pointer-events: auto !important;
+}
+
+#waifu-tool {
+  right: 20px !important;
+  bottom: 10px !important;
+  transform: scale(1.0) !important;
+  /* 恢复工具栏大小 */
+  transform-origin: bottom right;
+}
+
+/* 强制放大看板娘工具栏按钮 */
+#waifu-tool span {
+  display: block;
+  cursor: pointer;
+  color: #5b6c7d;
+  transition: 0.2s;
+  font-size: 24px !important;
+  /* 图标变大 */
+  line-height: 36px !important;
+  /* 行高增加 */
+  height: 36px !important;
+  /* 高度增加 */
+  width: 36px !important;
+  /* 宽度增加 */
+}
+
+#waifu-tool span:hover {
+  color: #3b8bdb;
+  /* 悬停颜色 */
+  transform: scale(1.2);
+  /* 悬停放大 */
+}
+
+#waifu-tips {
+  right: 0px !important;
+  left: auto !important;
+  top: auto !important;
+  bottom: 300px !important;
+  /* 随着人物变大，气泡也要提得更高，确保在头顶右上 */
+  width: 200px !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  padding: 12px !important;
+  min-height: 50px !important;
+  z-index: 999 !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(59, 139, 219, 0.4) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
